@@ -16,9 +16,9 @@
     (conj (recursive-reverse (drop-last coll)) (last coll))))
 
 (defn factorial [n]
-  (if (= n 1)
+  (if (= 1 n)
     1
-    (+ (factorial [(dec n)]))))
+    (* (factorial (dec n)) n)))
 
 (meditations
   "Recursion ends with a base case"
