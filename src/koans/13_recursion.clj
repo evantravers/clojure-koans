@@ -20,6 +20,12 @@
     1
     (* (factorial (dec n)) n)))
 
+(defn factorial [n]
+  (loop [n n acc 1]
+    (if (= 1 n)
+      acc
+      (recur (dec n) (* acc n)))))
+
 (meditations
   "Recursion ends with a base case"
   (= true (is-even? 0))
